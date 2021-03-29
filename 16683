@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+   <head>
+      <title>Animation | Circle Loading - All</title>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+      <style type="text/css" media="all">
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+:root {
+   --size-circle-out: 30rem;
+   --size-circle-in: calc(var(--size-circle-out) * 83 / 100);
+   --size-circle-inest: calc(var(--size-circle-in) * 80 / 100);
+}
+
+html {
+   font-size: 62.5%;
+}
+
+body {
+   font-family: 'Quicksand';
+   font-size: 1.6rem;
+}
+
+.loading {
+   position: relative;
+   background: linear-gradient(-45deg, #6d878e, #f6b5cc);
+   background: url('https://user-images.githubusercontent.com/63446147/104334006-6d8be380-5524-11eb-94df-adf08eb2b8bf.jpg');
+   background-size: contain;
+   background-repeat: no-repeat;
+   background-size: cover;
+   width: 100%;
+   height: 100vh;
+   text-align: center;
+   display: flex;
+   flex-direction: column;
+   color: #fff;
+}
+
+.loading__title {
+   color: #e1415f;
+   font-weight: 700;
+   position: absolute;
+   font-size: 3rem;
+   text-transform: uppercase;
+   align-self: center;
+   margin: 5% 0 0 0;
+}
+
+.loading__outinest {
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   margin: auto auto;
+   border-radius: 50%;
+   border-width: 4px;
+   border-style: solid;
+   transform-origin: center;
+}
+
+.loading__out {
+   width: var(--size-circle-out);
+   height: var(--size-circle-out);
+   border-color: #e9bcac transparent;
+   animation: animate__out 10s ease-in-out infinite;
+   z-index: 3;
+}
+
+.loading__in {
+   width: var(--size-circle-in);
+   height: var(--size-circle-in);
+   border-color: transparent #d1c6f3;
+   animation: animate__in 8s ease-in-out infinite;
+   z-index: 4;
+}
+
+.loading__inest {
+   width: var(--size-circle-inest);
+   height: var(--size-circle-inest);
+   border-color: #a0f1ea transparent;
+   animation: animate__inest 6s ease-in-out infinite;
+   z-index: 4;
+}
+
+.loading__border-out,
+.loading__border-in,
+.loading__border-inest {
+   content: '';
+   border-radius: 50%;
+   border-width: 1px;
+   border-color: rgba(255, 255, 255, 0.4);
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+}
+
+.loading__border-out {
+   width: calc(var(--size-circle-out) - 0.5%);
+   height: calc(var(--size-circle-out) - 0.5%);
+   border-style: solid;
+   z-index: 2;
+}
+
+.loading__border-in {
+   width: calc(var(--size-circle-in) - 0.5%);
+   height: calc(var(--size-circle-in) - 0.5%);
+   border-style: dashed;
+}
+
+.loading__border-inest {
+   width: calc(var(--size-circle-inest) - 0.5%);
+   height: calc(var(--size-circle-inest) - 0.5%);
+   border-style: dotted;
+}
+
+.loading__out:after,
+.loading__in:after,
+.loading__inest:after {
+   content: '❤';
+}
+
+@keyframes animate__out {
+   0% {
+      transform: translate(-50%, -50%) rotateZ(0deg);
+   }
+   100% {
+      transform: translate(-50%, -50%) rotateZ(360deg);
+   }
+}
+
+@keyframes animate__in {
+   0% {
+      transform: translate(-50%, -50%) rotateZ(0deg);
+   }
+   100% {
+      transform: translate(-50%, -50%) rotateZ(-360deg);
+   }
+}
+
+@keyframes animate__inest {
+   0% {
+      transform: translate(-50%, -50%) rotateZ(0deg);
+   }
+   100% {
+      transform: translate(-50%, -50%) rotateZ(360deg);
+   }
+}
+
+.loading__paragraph-1 {
+   position: absolute;
+   top: 25%;
+   left: 5%;
+   transform: translate(-50%, -50%) rotate(-90deg);
+   font-size: 2rem;
+   font-weight: 600;
+}
+
+.loading__paragraph-2 {
+   position: absolute;
+   top: 85%;
+   right: 5%;
+   transform: translate(50%, -50%) rotate(90deg);
+   font-size: 2rem;
+   font-weight: 600;
+}
+
+.loading__paragraph-3 {
+   text-align: left;
+   font-weight: 500;
+   position: absolute;
+   top: 83%;
+   left: 35%;
+   transform: translate(-50%, -50%);
+}
+
+.loading__paragraph-4 {
+   font-size: 1.8rem;
+   position: absolute;
+   top: 22%;
+   right: 0%;
+   transform: translate(-50%, -50%) rotate(30deg);
+   font-weight: 600;
+}
+      </style>
+   </head>
+
+<body>
+   <div class="loading">
+      <div class="loading__title">THU HOÀI</div>
+      <div class="loading__outinest loading__out"></div>
+      <div class="loading__outinest loading__in"></div>
+      <div class="loading__outinest loading__inest"></div>
+      <div class="loading__border-out"></div>
+      <div class="loading__border-in"></div>
+      <div class="loading__border-inest"></div>
+      <div class="loading__paragraph-1">
+         - Thu Hoài – 2354 —
+      </div>
+      <div class="loading__paragraph-2">
+         - Ender Uyên —
+      </div>
+      <div class="loading__paragraph-3">
+         Chúng ta của hiện tại...<br />
+         Yêu nhau thật nhiều<br />
+         Thương nhau thật nhiều<br />
+         Dành cả thanh xuân cho nhau!
+      </div>
+      <div class="loading__paragraph-4">
+         #THƯƠNG_EM
+      </div>
+   </div>
+</body>
+
+</html>
