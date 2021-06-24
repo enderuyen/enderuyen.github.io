@@ -1,0 +1,66 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --width: 100vw;
+    --unit: calc(var(--width)/100);
+}
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: calc(var(--unit)*1.65);
+    font-family: "Nunito", sans-serif;
+    color: #2A2F35;
+}
+
+.header {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: calc(var(--unit)*10);
+}
+
+.header__personality {
+    display: flex;
+    justify-content: space-evenly;
+    width: 35%;
+}
+
+.header__personality--para {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header__personality--para:nth-child(1),
+.header__personality--para:nth-child(2) {
+    border-right: calc(var(--unit)*0.15) solid #41434Faa;
+}
+
+.header__name {
+    width: 20%;
+    height: 100%;
+    position: relative;
+}
+
+.header__name--title {
+    font-size: calc(var(--unit)*5.5);
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.header__name--add {
+    font-size: calc(var(--unit)*2.5);
+    font-family: "Mrs Saint Delafield", cursive;
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-5deg);
+}
