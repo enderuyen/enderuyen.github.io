@@ -168,6 +168,19 @@ body {
     color: indianred;
 }
 
+.audio {
+    width: 100%;
+    height: calc(var(--unit)*12);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.audio__a {
+    width: 50%;
+    height: 40%;
+}   
+
 .span-write-2 {
     width: 100vw;
     height: calc(var(--unit)*5);
