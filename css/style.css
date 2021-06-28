@@ -15,6 +15,9 @@ body {
     font-size: calc(var(--unit)*1.65);
     font-family: "Nunito", sans-serif;
     color: #2A2F35;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
 }
 
 .header {
@@ -239,7 +242,7 @@ body {
     transform: translate(-50%, -60%) rotate(-15deg);
     top: 40%;
     left: 20%;
-    animation: animate-1 4s linear infinite;
+    animation: animate-1 4s ease-in-out infinite;
 }
 
 @keyframes animate-1 {
@@ -263,7 +266,7 @@ body {
     transform: translate(-50%, -50%) rotate(15deg);
     top: 28%;
     left: 75%;
-    animation: animate-4 4s linear infinite;
+    animation: animate-4 4s ease-in-out infinite;
 }
 
 @keyframes animate-4 {
@@ -290,7 +293,7 @@ body {
     transform: translate(-50%, -50%);
     top: 63%;
     left: 50%;
-    animation: animate-3 4s linear infinite;
+    animation: animate-3 4s ease-in-out infinite;
 }
 
 @keyframes animate-3 {

@@ -15,6 +15,9 @@ body {
     font-size: calc(var(--unit)*1.65);
     font-family: "Nunito", sans-serif;
     color: #2A2F35;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
 }
 
 .header {
